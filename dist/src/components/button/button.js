@@ -1,9 +1,8 @@
 import * as React from 'react';
-import styles from './button.module.css';
+import styles from './button.module.scss';
 var Button = function (props) {
-    var type = props.type;
-    var styletype = styles.type;
-    return (React.createElement("button", { className: styletype, onClick: props.onClick }, props.text));
+    return (React.createElement(React.Fragment, null,
+        React.createElement("button", { className: styles[props.typeButton], onClick: props.onClick }, props.text)));
 };
 export default Button;
 //# sourceMappingURL=button.js.map
